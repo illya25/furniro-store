@@ -1,0 +1,27 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../utils/breakpoints' as *;
+
+.submenu {
+  background: url(./../../img/bg/shopbg.jpeg);
+  height: 316px;
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__subtitle {
+    display: flex;
+    gap: 10px;
+
+    a {
+      color: $color-black;
+    }
+  }
+  &__title {
+    margin-top: 8%;
+    font-size: 48px;
+    font-weight: 500;
+  }
+}

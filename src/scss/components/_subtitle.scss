@@ -1,0 +1,18 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../utils/breakpoints' as *;
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: $color-text;
+
+  @include laptop {
+    font-size: 18px;
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
+}

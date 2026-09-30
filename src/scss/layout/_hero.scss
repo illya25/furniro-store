@@ -1,0 +1,62 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../utils/breakpoints' as *;
+
+.hero {
+  position: relative;
+  background-image: url('../../img/bg/hero-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 717px;
+  &__block {
+    position: absolute;
+    top: 153px;
+    right: 58px;
+    width: 643px;
+    background: $color-bg-light;
+    padding: 62px 71px 32px 41px;
+    border-radius: 10px;
+    @include tablet {
+      position: static;
+      margin: 0 auto;
+      margin-top: 10%;
+      width: 90%;
+      text-align: center;
+    }
+  }
+  &__toptitle {
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  &__title {
+    color: $color-primary;
+    font-size: 52px;
+    width: 80%;
+    line-height: 65px;
+    margin-bottom: 10px;
+    @include tablet {
+      font-size: 42px;
+      width: 100%;
+    }
+    @include mobile {
+      font-size: 35spx;
+    }
+  }
+  &__subtitle {
+    color: $color-black;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 46px;
+    @include tablet {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+  }
+  &__button {
+    display: inline-block;
+    background: $color-primary;
+    color: $color-white;
+    padding: 22px 55px;
+  }
+}

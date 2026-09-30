@@ -1,0 +1,27 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../utils/breakpoints' as *;
+
+.categories {
+  padding: 56px 0px;
+  &__subtitle {
+    margin: 10px 0px 50px 0px;
+  }
+  &__list {
+    display: flex;
+    gap: 20px;
+    @include tablet {
+      width: 95%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    text-align: center;
+    &-title {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+}

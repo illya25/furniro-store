@@ -1,0 +1,39 @@
+// utils
+@use './utils/variables';
+@use './utils/mixins';
+@use './utils/breakpoints';
+
+// base
+@use './base/normalize';
+@use './base/common';
+@use './base/container';
+@use './base/typography';
+
+// layout
+
+@use './layout/header';
+@use './layout/hero';
+@use './layout/categories';
+@use './layout/products';
+@use './layout/about';
+@use './layout/features';
+@use './layout/inspiration';
+@use './layout/gallery';
+@use './layout/benefits';
+@use './layout/service';
+@use './layout/faq';
+@use './layout/cta';
+@use './layout/footer';
+@use './layout/shop';
+
+// components
+@use './components/button';
+@use './components/subtitle';
+@use './components/title';
+
+body {
+  background: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');

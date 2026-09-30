@@ -1,0 +1,271 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../utils/breakpoints' as *;
+
+.inspiration {
+  background: #fcf8f3;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    @include laptop {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__content {
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 100px 0 100px 100px;
+
+    @include laptop {
+      flex: none;
+      padding: 70px 40px 40px;
+    }
+
+    @include tablet {
+      padding: 60px 24px 30px;
+    }
+
+    @include mobile {
+      gap: 20px;
+      padding: 50px 16px 30px;
+    }
+  }
+
+  &__title {
+    max-width: 420px;
+
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: $color-title;
+
+    @include tablet {
+      font-size: 34px;
+      line-height: 42px;
+    }
+
+    @include mobile {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    max-width: 400px;
+
+    color: $color-text;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__button {
+    display: inline-block;
+    width: fit-content;
+
+    padding: 12px 70px;
+
+    color: $color-white;
+    background: $color-primary;
+    border: 1px solid $color-primary;
+
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+
+    transition: $transition;
+
+    &:hover {
+      color: $color-primary;
+      background: none;
+    }
+
+    @include mobile {
+      padding: 12px 45px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    margin: 44px 0;
+
+    @include laptop {
+      margin: 20px 0 40px;
+    }
+
+    @include mobile {
+      margin: 10px 0 30px;
+    }
+  }
+
+  &__viewport {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    transition: transform 0.4s ease;
+
+    @include mobile {
+      gap: 16px;
+    }
+  }
+
+  &__slide {
+    position: relative;
+
+    flex: 0 0 372px;
+    height: 480px;
+
+    margin-top: 40px;
+
+    transition:
+      height 0.4s ease,
+      margin-top 0.4s ease;
+
+    @include tablet {
+      flex-basis: 320px;
+      height: 420px;
+    }
+
+    @include mobile {
+      flex-basis: 280px;
+      height: 380px;
+      margin-top: 30px;
+    }
+  }
+
+  &__slide--active {
+    height: 550px;
+    margin-top: 0;
+
+    @include tablet {
+      height: 480px;
+    }
+
+    @include mobile {
+      height: 420px;
+    }
+  }
+
+  &__slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__slide-content {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+
+    padding: 20px;
+
+    background: rgb(255 255 255 / 90%);
+
+    @include mobile {
+      left: 16px;
+      bottom: 16px;
+      padding: 14px;
+    }
+  }
+
+  &__slide-category {
+    margin: 0;
+
+    color: $color-text;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__slide-title {
+    margin: 0;
+
+    color: $color-title;
+    font-size: 24px;
+    line-height: 30px;
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__next {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+    background: $color-white;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+
+    @include mobile {
+      right: 16px;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 24px;
+    margin-left: 10px;
+
+    @include mobile {
+      margin-top: 18px;
+      margin-left: 16px;
+    }
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 50%;
+    background: transparent;
+
+    cursor: pointer;
+
+    &--active {
+      background: #b88e2f;
+      border-color: #b88e2f;
+
+      box-shadow:
+        0 0 0 4px #fcf8f3,
+        0 0 0 5px #b88e2f;
+    }
+  }
+}
