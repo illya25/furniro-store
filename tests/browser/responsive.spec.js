@@ -95,14 +95,15 @@ test('desktop hover, cart and save controls', async ({ page }) => {
   await expect(card.locator('.product-card__overlay')).toHaveCSS('opacity', '0');
 });
 
-test('phone controls are usable and do not cover the image', async ({ browser }) => {
+test('phone controls are usable and do not cover the image', async ({ browser, baseURL }) => {
   const context = await browser.newContext({
+    baseURL,
     viewport: { width: 375, height: 812 },
     isMobile: true,
     hasTouch: true,
   });
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4173/shop.html');
+  await page.goto('shop.html');
   const card = page.locator('.product-card').first();
   await card.scrollIntoViewIfNeeded();
   const image = await card.locator('.product-card__image').boundingBox();

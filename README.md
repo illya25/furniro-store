@@ -18,6 +18,20 @@ npm run preview
 
 Публікуй вміст `dist/`. Збірка включає Home, Shop, сторінку товару, About, Contact і сумісну адресу `abaut.html`.
 
+## GitHub Pages
+
+Для репозиторію `illya25/furniro-store` у `vite.config.js` встановлено `base: '/furniro-store/'`.
+
+1. У GitHub відкрий **Settings → Pages → Build and deployment → Source → GitHub Actions**.
+2. Закоміть зміни та відправ їх у гілку `main`, включно з `.github/workflows/deploy.yml`.
+3. У вкладці **Actions** дочекайся успішного завершення **Deploy Furniro to GitHub Pages**. Також можна запустити його вручну через **Run workflow**.
+
+Адреса сайту: <https://illya25.github.io/furniro-store/>.
+
+Workflow встановлює залежності, перевіряє код, збирає сайт і публікує лише `dist`. GitHub Pages не збирає Vite при звичайній публікації кореня гілки: `src/main.js` містить імпорти, які потрібно спочатку обробити збіркою. HTML-компоненти імпортуються через `?raw`, тому окремих запитів до `src/components` на опублікованому сайті немає.
+
+Для локальної перевірки відкрий `http://localhost:4173/furniro-store/` після `npm run build` і `npm run preview`. Браузерні тести теж використовують цей шлях.
+
 ## Можливості
 
 - Спільні картки товарів із ховером на комп'ютері та постійними кнопками на сенсорних пристроях.

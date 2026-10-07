@@ -214,14 +214,16 @@ test('unknown product has a usable path back to the shop', async ({ page }) => {
 
 test('a native touch swipe changes the room and synchronizes its indicator', async ({
   browser,
+  baseURL,
 }) => {
   const context = await browser.newContext({
+    baseURL,
     viewport: { width: 375, height: 812 },
     hasTouch: true,
     isMobile: true,
   });
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4173/index.html');
+  await page.goto('index.html');
   const viewport = page.locator('.inspiration__viewport');
   await viewport.scrollIntoViewIfNeeded();
   const box = await viewport.boundingBox();
