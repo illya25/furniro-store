@@ -9,9 +9,9 @@ import { initReveal } from './js/reveal.js';
 import './js/contact.js';
 import './js/gallery.js';
 import { initStoreUI } from './js/store-ui.js';
-import headerHtml from './components/header.html?raw';
-import footerHtml from './components/footer.html?raw';
-import benefitsHtml from './components/benefits.html?raw';
+fetch(`${import.meta.env.BASE_URL}src/components/header.html`);
+fetch(`${import.meta.env.BASE_URL}src/components/footer.html`);
+fetch(`${import.meta.env.BASE_URL}src/components/benefits.html`);
 
 // Bundle component images as well as markup for production builds.
 const componentAssets = import.meta.glob(['./img/icon/*.{svg,png}', './img/benefits/*'], {
