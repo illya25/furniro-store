@@ -1,271 +1,254 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
-@use '../utils/breakpoints' as *;
-
 .inspiration {
+  padding: 64px 0;
   background: #fcf8f3;
+}
 
-  &__container {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+.inspiration__container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 48px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-    @include laptop {
-      flex-direction: column;
-      align-items: stretch;
-    }
+.inspiration__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.inspiration__title {
+  max-width: 420px;
+  font-size: clamp(30px, 3.4vw, 42px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.inspiration__text {
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #777;
+}
+
+.inspiration__button {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #b88e2f;
+  border: 1px solid #b88e2f;
+  transition: background 200ms ease;
+}
+
+.inspiration__button:hover {
+  background: #997621;
+}
+
+.inspiration__slider {
+  min-width: 0;
+}
+
+.inspiration__viewport {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  border-radius: 8px;
+}
+
+.inspiration__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.inspiration__track {
+  display: flex;
+  gap: 20px;
+}
+
+.inspiration__track::after {
+  content: '';
+  flex: 0 0 30%;
+}
+
+.inspiration__slide {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  height: 480px;
+  border-radius: 8px;
+  flex: 0 0 70%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.inspiration__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inspiration__slide-content {
+  position: absolute;
+  right: 20px;
+  bottom: 24px;
+  left: 20px;
+  max-width: 260px;
+  padding: 20px;
+  background: #ffffffed;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+}
+
+.inspiration__slide-category {
+  font-size: 12px;
+  color: #777;
+}
+
+.inspiration__slide-title {
+  margin: 8px 0 12px;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 500;
+}
+
+.inspiration__slide-content a {
+  font-size: 12px;
+  font-weight: 500;
+  color: #8b651b;
+}
+
+.inspiration__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.inspiration__arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.inspiration__previous,
+.inspiration__next {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 26px;
+  color: #b88e2f;
+  background: #fff;
+  border: 1px solid #eadfc9;
+  border-radius: 50%;
+  transition: background 200ms ease;
+  cursor: pointer;
+  place-items: center;
+}
+
+.inspiration__previous:hover,
+.inspiration__next:hover {
+  background: #f2e5cd;
+}
+
+.inspiration__dots {
+  display: flex;
+  gap: 4px;
+}
+
+.inspiration__dot {
+  display: grid;
+  width: 36px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  place-items: center;
+}
+
+.inspiration__dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 1px solid #b88e2f;
+  border-radius: 50%;
+  transition: background 200ms ease;
+}
+
+.inspiration__dot--active::after {
+  background: #b88e2f;
+  box-shadow:
+    0 0 0 4px #fcf8f3,
+    0 0 0 5px #d4bd90;
+}
+
+.inspiration__count {
+  font-size: 12px;
+  color: #888;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+@media (width <= 900px) {
+  .inspiration {
+    padding: 48px 0;
   }
 
-  &__content {
-    flex: 0 0 35%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 100px 0 100px 100px;
-
-    @include laptop {
-      flex: none;
-      padding: 70px 40px 40px;
-    }
-
-    @include tablet {
-      padding: 60px 24px 30px;
-    }
-
-    @include mobile {
-      gap: 20px;
-      padding: 50px 16px 30px;
-    }
+  .inspiration__container {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  &__title {
-    max-width: 420px;
-
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    color: $color-title;
-
-    @include tablet {
-      font-size: 34px;
-      line-height: 42px;
-    }
-
-    @include mobile {
-      font-size: 30px;
-      line-height: 36px;
-    }
+  .inspiration__content {
+    max-width: 620px;
   }
 
-  &__text {
-    max-width: 400px;
-
-    color: $color-text;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+  .inspiration__title,
+  .inspiration__text {
+    max-width: none;
   }
 
-  &__button {
-    display: inline-block;
-    width: fit-content;
-
-    padding: 12px 70px;
-
-    color: $color-white;
-    background: $color-primary;
-    border: 1px solid $color-primary;
-
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: none;
-
-    transition: $transition;
-
-    &:hover {
-      color: $color-primary;
-      background: none;
-    }
-
-    @include mobile {
-      padding: 12px 45px;
-    }
+  .inspiration__slide {
+    flex-basis: 65%;
+    height: 450px;
   }
 
-  &__slider {
-    position: relative;
-    flex: 1;
-    min-width: 0;
-    margin: 44px 0;
+  .inspiration__track::after {
+    flex-basis: 35%;
+  }
+}
 
-    @include laptop {
-      margin: 20px 0 40px;
-    }
-
-    @include mobile {
-      margin: 10px 0 30px;
-    }
+@media (width <= 540px) {
+  .inspiration__slide {
+    flex-basis: 100%;
+    height: clamp(340px, 110vw, 460px);
   }
 
-  &__viewport {
-    width: 100%;
-    overflow: hidden;
+  .inspiration__track {
+    gap: 16px;
   }
 
-  &__track {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-
-    transition: transform 0.4s ease;
-
-    @include mobile {
-      gap: 16px;
-    }
+  .inspiration__track::after {
+    display: none;
   }
 
-  &__slide {
-    position: relative;
-
-    flex: 0 0 372px;
-    height: 480px;
-
-    margin-top: 40px;
-
-    transition:
-      height 0.4s ease,
-      margin-top 0.4s ease;
-
-    @include tablet {
-      flex-basis: 320px;
-      height: 420px;
-    }
-
-    @include mobile {
-      flex-basis: 280px;
-      height: 380px;
-      margin-top: 30px;
-    }
+  .inspiration__slide-content {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    padding: 18px;
   }
 
-  &__slide--active {
-    height: 550px;
-    margin-top: 0;
-
-    @include tablet {
-      height: 480px;
-    }
-
-    @include mobile {
-      height: 420px;
-    }
-  }
-
-  &__slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__slide-content {
-    position: absolute;
-    left: 24px;
-    bottom: 24px;
-
-    padding: 20px;
-
-    background: rgb(255 255 255 / 90%);
-
-    @include mobile {
-      left: 16px;
-      bottom: 16px;
-      padding: 14px;
-    }
-  }
-
-  &__slide-category {
-    margin: 0;
-
-    color: $color-text;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  &__slide-title {
-    margin: 0;
-
-    color: $color-title;
-    font-size: 24px;
-    line-height: 30px;
-
-    @include mobile {
-      font-size: 20px;
-      line-height: 26px;
-    }
-  }
-
-  &__next {
-    position: absolute;
-    top: 50%;
-    right: 24px;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 48px;
-    height: 48px;
-
-    border: none;
-    border-radius: 50%;
-    background: $color-white;
-
-    cursor: pointer;
-
-    transform: translateY(-50%);
-
-    @include mobile {
-      right: 16px;
-
-      width: 40px;
-      height: 40px;
-    }
-  }
-
-  &__dots {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    margin-top: 24px;
-    margin-left: 10px;
-
-    @include mobile {
-      margin-top: 18px;
-      margin-left: 16px;
-    }
-  }
-
-  &__dot {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-
-    border: 1px solid #d8d8d8;
-    border-radius: 50%;
-    background: transparent;
-
-    cursor: pointer;
-
-    &--active {
-      background: #b88e2f;
-      border-color: #b88e2f;
-
-      box-shadow:
-        0 0 0 4px #fcf8f3,
-        0 0 0 5px #b88e2f;
-    }
+  .inspiration__controls {
+    gap: 8px;
   }
 }

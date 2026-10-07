@@ -1,36 +1,24 @@
 export default {
+  // Vendored normalize.css includes deliberate browser compatibility rules.
+  ignoreFiles: ['src/scss/base/_normalize.scss'],
   extends: ['stylelint-config-standard-scss'],
 
   plugins: ['stylelint-order'],
 
   rules: {
+    'selector-class-pattern': '^[a-z][a-z0-9]*(?:[-_]+[a-z0-9]+)*$',
     'order/properties-order': [
       [
         'content',
-
-        {
-          emptyLineBefore: 'always',
-          noEmptyLineBetween: true,
-        },
         'position',
         'top',
         'right',
         'bottom',
         'left',
         'z-index',
-
-        {
-          emptyLineBefore: 'always',
-          noEmptyLineBetween: true,
-        },
         'display',
         'visibility',
         'overflow',
-
-        {
-          emptyLineBefore: 'always',
-          noEmptyLineBetween: true,
-        },
         'box-sizing',
         'width',
         'min-width',
@@ -38,11 +26,6 @@ export default {
         'height',
         'min-height',
         'max-height',
-
-        {
-          emptyLineBefore: 'always',
-          noEmptyLineBetween: true,
-        },
         'margin',
         'margin-top',
         'margin-right',
@@ -53,11 +36,6 @@ export default {
         'padding-right',
         'padding-bottom',
         'padding-left',
-
-        {
-          emptyLineBefore: 'always',
-          noEmptyLineBetween: true,
-        },
         'font',
         'font-family',
         'font-size',
@@ -68,11 +46,6 @@ export default {
         'text-transform',
         'letter-spacing',
         'color',
-
-        {
-          emptyLineBefore: 'always',
-          noEmptyLineBetween: true,
-        },
         'background',
         'background-color',
         'background-image',
@@ -80,11 +53,6 @@ export default {
         'background-size',
         'border',
         'border-radius',
-
-        {
-          emptyLineBefore: 'always',
-          noEmptyLineBetween: true,
-        },
         'opacity',
         'transform',
         'transition',

@@ -4,21 +4,24 @@
 
 .products {
   &__button-wrapper {
+    margin: 40px 0;
     text-align: center;
-    margin: 50px;
   }
 
   &__button {
-    color: $color-primary;
-    font-weight: 600;
+    display: inline-block;
+    max-width: 100%;
+    padding: 12px 40px;
     font-size: 16px;
-    padding: 12px 70px;
-    border: 1px solid $color-primary;
+    font-weight: 600;
     text-decoration: none;
+    color: $color-primary;
+    border: 1px solid $color-primary;
     transition: $transition;
+
     &:hover {
-      background: $color-primary;
       color: $color-white;
+      background: $color-primary;
     }
   }
 }

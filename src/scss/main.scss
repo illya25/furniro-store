@@ -20,11 +20,15 @@
 @use './layout/inspiration';
 @use './layout/gallery';
 @use './layout/benefits';
+@use './layout/product';
 @use './layout/service';
 @use './layout/faq';
 @use './layout/cta';
 @use './layout/footer';
 @use './layout/shop';
+@use './layout/store';
+@use './layout/editorial';
+@use './layout/enhancements';
 
 // components
 @use './components/button';
@@ -32,8 +36,6 @@
 @use './components/title';
 
 body {
-  background: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: Poppins, sans-serif;
+  background: #fff;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');

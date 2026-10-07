@@ -1,31 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Shop | Furniro</title>
+    <meta
+      name="description"
+      content="Browse the Furniro furniture collection. Search, sort by price, and save your favorite pieces."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <title>Shop</title>
-</head>
-
-<body>
-
+  <body>
+    <!-- header -->
     <div id="header"></div>
-
-    <section class="submenu">
+    <main>
+      <section class="submenu">
         <div class="submenu__text">
-            <h2 class="submenu__title">Shop</h2>
-            <div class="submenu__subtitle">
-                <a href="#" class="submenu__home">Home</a>
-                <a href="#" class="submenu__shop">Shop</a>
-            </div>
+          <h1 class="submenu__title">Shop</h1>
+          <div class="submenu__subtitle">
+            <a href="./index.html" class="submenu__home">Home</a>
+            <a href="./shop.html" class="submenu__shop">Shop</a>
+          </div>
         </div>
-    </section>
+      </section>
+      <!-- shop.html -->
 
+      <section class="shop">
+        <div class="container">
+          <div class="shop-search">
+            <label for="shop-search">Find something for your home</label
+            ><input
+              id="shop-search"
+              type="search"
+              placeholder="Search by name or description…"
+              autocomplete="off"
+            />
+          </div>
+          <div class="shop-toolbar">
+            <div class="shop-toolbar__left">
+              <button
+                class="shop-toolbar__filter"
+                type="button"
+                aria-controls="shop-filters"
+                aria-expanded="false"
+              >
+                Filter
+              </button>
 
+              <span class="shop-toolbar__divider"></span>
+
+              <p class="shop-toolbar__results" role="status">Loading products…</p>
+            </div>
+
+            <div class="shop-toolbar__right">
+              <label class="shop-toolbar__control">
+                <span>Show</span>
+
+                <!-- shop.html -->
+
+                <select class="shop-toolbar__show">
+                  <option value="16" selected>16</option>
+                  <option value="8">8</option>
+                  <option value="24">24</option>
+                </select>
+              </label>
+
+              <label class="shop-toolbar__control">
+                <span>Sort by</span>
+
+                <!-- shop.html -->
+
+                <select class="shop-toolbar__sort">
+                  <option value="default">Default</option>
+                  <option value="price-asc">Price: low to high</option>
+                  <option value="price-desc">Price: high to low</option>
+                  <option value="name-asc">Name: A–Z</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <form id="shop-filters" class="shop-filters" hidden>
+            <label for="price-min"
+              >Minimum price (Rp)<input
+                id="price-min"
+                type="number"
+                min="0"
+                step="1000"
+                placeholder="0"
+            /></label>
+            <label for="price-max"
+              >Maximum price (Rp)<input
+                id="price-max"
+                type="number"
+                min="0"
+                step="1000"
+                placeholder="Any price"
+            /></label>
+            <button type="reset">Reset price filters</button>
+          </form>
+        </div>
+      </section>
+      <!-- shop.html -->
+
+      <section class="shop-products">
+        <div class="container">
+          <div class="products__grid shop-products__grid"></div>
+
+          <div class="shop-pagination" aria-label="Product pages"></div>
+        </div>
+      </section>
+
+      <!--  -->
+    </main>
+    <div id="benefits"></div>
+
+    <!-- footer -->
     <div id="footer"></div>
 
     <script type="module" src="/src/main.js"></script>
-</body>
-
+  </body>
 </html>

@@ -6,12 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node tests/store.mjs",
+    "lint": "eslint src vite.config.js playwright.config.js tests",
+    "test:build": "npm run build && node tests/build.mjs",
+    "lint:styles": "stylelint 'src/scss/**/*.scss'",
+    "test:browser": "playwright test"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
     "eslint": "^10.8.0",
     "globals": "^17.9.0",
+    "jsdom": "^29.1.1",
     "prettier": "^3.9.6",
     "sass": "^1.102.0",
     "stylelint": "^17.14.1",

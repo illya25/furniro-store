@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" />
+    <title>Contact | Furniro</title>
+    <meta
+      name="description"
+      content="Get in touch with Furniro for furniture questions, room styling ideas, and collaborations."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+      <section class="page-banner">
+        <div class="container">
+          <p class="store-eyebrow">Contact</p>
+          <h1>Get in touch.</h1>
+          <p>Questions about furniture, sizing, or care? Leave a message below.</p>
+          <nav aria-label="Breadcrumb">
+            <a href="./index.html">Home</a><span aria-hidden="true">/</span
+            ><span aria-current="page">Contact</span>
+          </nav>
+        </div>
+      </section>
+      <section class="contact-layout container">
+        <div class="contact-copy" data-reveal>
+          <p class="store-eyebrow">Contact details</p>
+          <h2>How can we help?</h2>
+          <p>
+            Include the product name and your room measurements if you have a question about sizing.
+            For other enquiries, choose a subject in the form.
+          </p>
+          <div class="contact-detail">
+            <span aria-hidden="true">↗</span>
+            <div>
+              <h3>Visit the studio</h3>
+              <p>400 University Drive, Suite 200<br />Coral Gables, FL 33134</p>
+              <small>Sample showroom details for this portfolio.</small>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span aria-hidden="true">@</span>
+            <div>
+              <h3>Say hello</h3>
+              <p>hello@furniro.example</p>
+              <small>Furniture questions, styling ideas, and collaborations.</small>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span aria-hidden="true">◷</span>
+            <div>
+              <h3>Studio hours</h3>
+              <p>Monday – Friday: 9:00 – 18:00<br />Saturday: 10:00 – 16:00</p>
+              <small>Closed on Sunday.</small>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-card" data-reveal>
+          <h2>Leave a message</h2>
+          <p>Fill in your details and choose a subject.</p>
+          <form id="contact-form">
+            <div class="contact-form-row">
+              <label for="contact-name"
+                >Your name<input
+                  id="contact-name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Alex Morgan"
+                  maxlength="100"
+                  required /></label
+              ><label for="contact-email"
+                >Email address<input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  maxlength="200"
+                  required
+              /></label>
+            </div>
+            <label for="contact-subject"
+              >What can we help with?<select id="contact-subject" name="subject">
+                <option>Finding the right furniture</option>
+                <option>Product details & care</option>
+                <option>Delivery & returns</option>
+                <option>Collaboration</option>
+                <option>Something else</option>
+              </select></label
+            >
+            <label for="contact-message"
+              >Your message<textarea
+                id="contact-message"
+                name="message"
+                rows="6"
+                placeholder="Tell us about your space or ask a question…"
+                minlength="10"
+                maxlength="3000"
+                required
+              ></textarea>
+            </label>
+            <p class="contact-demo-note">
+              Portfolio demo: your message is saved on this device. No email is sent.
+            </p>
+            <button class="store-primary" type="submit">
+              Save message <span aria-hidden="true">↗</span>
+            </button>
+            <p id="contact-status" class="contact-status" role="status" tabindex="-1" hidden></p>
+          </form>
+        </div>
+      </section>
+      <section class="contact-help container" data-reveal>
+        <div>
+          <p class="store-eyebrow">Help</p>
+          <h2>Looking for a quick answer?</h2>
+          <p>
+            Find advice on choosing the right size, caring for furniture, and keeping your favorite
+            pieces together.
+          </p>
+        </div>
+        <a class="editorial-link" href="./about.html#faq"
+          >Read the FAQ <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <div id="benefits"></div>
+    <div id="footer"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

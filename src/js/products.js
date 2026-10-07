@@ -15,7 +15,7 @@ const products = [
     name: 'Leviosa',
     description: 'Stylish cafe chair',
     price: 'Rp 2.500.000',
-    image: './src/img/product/images2.png',
+    image: './src/img/product/Images2.png',
     badge: null,
   },
 
@@ -24,7 +24,7 @@ const products = [
     description: 'Luxury big sofa',
     price: 'Rp 7.000.000',
     oldPrice: 'Rp 14.000.000',
-    image: './src/img/product/images3.jpeg',
+    image: './src/img/product/Images3.jpeg',
     badge: {
       type: 'discount',
       text: '-50%',
@@ -32,10 +32,22 @@ const products = [
   },
 
   {
+    name: 'Syltherine',
+    description: 'Stylish cafe chair',
+    price: 'Rp 2.500.000',
+    oldPrice: 'Rp 3.500.000',
+    image: './src/img/product/image1.jpeg',
+    badge: {
+      type: 'discount',
+      text: '-30%',
+    },
+  },
+
+  {
     name: 'Respira',
     description: 'Outdoor bar table and stool',
     price: 'Rp 500.000',
-    image: './src/img/product/images4.png',
+    image: './src/img/product/Images4.png',
     badge: {
       type: 'new',
       text: 'New',
@@ -43,17 +55,41 @@ const products = [
   },
 
   {
+    name: 'Syltherine',
+    description: 'Stylish cafe chair',
+    price: 'Rp 2.500.000',
+    oldPrice: 'Rp 3.500.000',
+    image: './src/img/product/image1.jpeg',
+    badge: {
+      type: 'discount',
+      text: '-30%',
+    },
+  },
+
+  {
     name: 'Grifo',
     description: 'Outdoor bar table and stool',
     price: 'Rp 500.000',
-    image: './src/img/product/images4.png',
+    image: './src/img/product/Images4.png',
+    badge: null,
   },
 
   {
     name: 'Muggo',
     description: 'Small mug',
     price: 'Rp 150.000',
-    image: './src/img/product/images5.jpeg',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
     badge: {
       type: 'new',
       text: 'New',
@@ -65,7 +101,7 @@ const products = [
     description: 'Cute bed set',
     price: 'Rp 7.000.000',
     oldPrice: 'Rp 14.000.000',
-    image: './src/img/product/images6.png',
+    image: './src/img/product/Images6.png',
     badge: {
       type: 'discount',
       text: '-50%',
@@ -74,7 +110,7 @@ const products = [
 
   {
     name: 'Potty',
-    description: 'OMinimalist flower pot',
+    description: 'Minimalist flower pot',
     price: 'Rp 500.000',
     image: './src/img/product/image7.jpeg',
     badge: {
@@ -82,77 +118,141 @@ const products = [
       text: 'New',
     },
   },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'Muggo',
+    description: 'Small mug',
+    price: 'Rp 150.000',
+    image: './src/img/product/Images5.jpeg',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
+
+  {
+    name: 'San bad',
+    description: 'Small mug',
+    price: 'Rp 200.000',
+    image: './src/img/product/Images4.png',
+    badge: {
+      type: 'new',
+      text: 'New',
+    },
+  },
 ];
 
-const productsList = document.querySelector('.products__list');
+const imageUrls = import.meta.glob('../img/product/*', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+});
+products.forEach((product, index) => {
+  product.id = index + 1;
+  product.image = imageUrls[`../img/product/${product.image.split('/').pop()}`];
+});
 
-if (productsList) {
-  productsList.innerHTML = products
-    .map(
-      (product) => `
-        <li class="products__item">
-          <article class="product-card">
-
-            <div class="product-card__image-wrapper">
-              <img
-                class="product-card__image"
-                src="${product.image}"
-                alt="${product.name}"
-              >
-
-              <div class="product-card__overlay">
-                  <button class="product-card__cart" type="button">
-                Add to cart
-                </button>
-            
-                  <div class="product-card__actions">
-                <button type="button">Share</button>
-                <button type="button">Compare</button>
-                <button type="button">Like</button>
-              </div>
-            </div>
-
-              ${
-                product.badge
-                  ? `
-                    <span class="product-card__badge product-card__badge--${product.badge.type}">
-                      ${product.badge.text}
-                    </span>
-                  `
-                  : ''
-              }
-            </div>
-
-            <div class="product-card__content">
-              <h3 class="product-card__title">
-                ${product.name}
-              </h3>
-
-              <p class="product-card__description">
-                ${product.description}
-              </p>
-
-              <div class="product-card__prices">
-                <span class="product-card__price">
-                  ${product.price}
-                </span>
-
-                ${
-                  product.oldPrice
-                    ? `
-                      <span class="product-card__old-price">
-                        ${product.oldPrice}
-                      </span>
-                    `
-                    : ''
-                }
-              </div>
-
-            </div>
-
-          </article>
-        </li>
-      `
-    )
-    .join('');
+export function getNumericPrice(product) {
+  return Number(product.price.replace(/\D/g, ''));
 }
+
+export function formatPrice(amount) {
+  return `Rp ${new Intl.NumberFormat('id-ID').format(amount)}`;
+}
+
+export function searchProducts(query) {
+  const term = query.trim().toLowerCase();
+  return products.filter((product) =>
+    `${product.name} ${product.description}`.toLowerCase().includes(term)
+  );
+}
+
+export { products };

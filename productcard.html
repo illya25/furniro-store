@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product | Furniro</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- header -->
+    <div id="header"></div>
+    <main>
+      <section class="product-breadcrumb">
+        <div class="container">
+          <div class="product-breadcrumb__inner">
+            <a href="/" class="product-breadcrumb__link">Home</a>
+
+            <span class="product-breadcrumb__arrow">›</span>
+
+            <a href="/shop.html" class="product-breadcrumb__link">Shop</a>
+
+            <span class="product-breadcrumb__arrow">›</span>
+
+            <span class="product-breadcrumb__current">Asgaard sofa</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="product">
+        <div class="container">
+          <div class="product__inner">
+            <div class="product__gallery">
+              <div class="product__main-image">
+                <img src="/src/img/product/image1.jpeg" alt="Product" />
+              </div>
+            </div>
+
+            <div class="product__info">
+              <h1 class="product__title">Asgaard sofa</h1>
+
+              <p class="product__price">Rs. 250,000.00</p>
+
+              <p class="product__description">Furniture and accessories from our collection.</p>
+              <p class="product__advice">
+                Choosing a piece for your room? Measure your space first, and leave enough room to
+                move comfortably around your furniture. Save your favorites to compare them later.
+              </p>
+
+              <div class="product__actions">
+                <div class="product__quantity">
+                  <button type="button">−</button>
+                  <span>1</span>
+                  <button type="button">+</button>
+                </div>
+
+                <button class="product__cart" type="button">Add To Cart</button>
+
+                <button class="product__save" type="button" aria-pressed="false">
+                  <span aria-hidden="true">♡</span> <span data-save-label>Save</span>
+                </button>
+              </div>
+
+              <div class="product__meta">
+                <p>
+                  <span>SKU</span>
+                  <strong data-product-sku>FNR-001</strong>
+                </p>
+
+                <p>
+                  <span>Collection</span>
+                  <strong>Furniture &amp; home accessories</strong>
+                </p>
+                <p>
+                  <span>Questions?</span>
+                  <a href="./contact.html">Ask about this item ↗</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <div id="footer"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
