@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/furniro-store/',
+
   build: {
     rollupOptions: {
       input: {
